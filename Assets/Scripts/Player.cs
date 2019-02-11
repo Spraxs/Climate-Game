@@ -10,6 +10,13 @@ public class Player : MonoBehaviour
 
     private float health = 100.0f;
 
+    private SoundEffectManager soundEffectManager;
+
+    void Awake()
+    {
+        soundEffectManager = FindObjectOfType<SoundEffectManager>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +43,8 @@ public class Player : MonoBehaviour
 
     public void Correct(float points)
     {
+        soundEffectManager.PlayWaterShoot();
+
         health += points / 10;
 
         if (health > 100)
