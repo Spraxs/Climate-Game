@@ -68,6 +68,13 @@ public class Water : MonoBehaviour
     {
         if (!spawned || target == null) return;
 
+        Transform trans = transform;
+
+        trans.LookAt(target.transform);
+
+        
+        transform.rotation = Quaternion.Euler(new Vector3(transform.rotation.x, transform.rotation.y, trans.rotation.z));
+
         transform.position = Vector2.MoveTowards(transform.position, target.transform.position, Time.deltaTime * speed);
     }
 

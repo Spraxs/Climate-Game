@@ -10,8 +10,6 @@ public class Player : MonoBehaviour
 
     private float health = 100.0f;
 
-    private SoundEffectManager soundEffectManager;
-
     [SerializeField]
     private GameObject waterObject;
 
@@ -20,11 +18,13 @@ public class Player : MonoBehaviour
 
     private GameManager gameManager;
 
+    private AudioSource audioSource;
+
     void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
         gameManager = FindObjectOfType<GameManager>();
         FindObjectOfType<HitCircle>().player = this;
-        soundEffectManager = FindObjectOfType<SoundEffectManager>();
     }
 
     // Start is called before the first frame update
@@ -43,6 +43,8 @@ public class Player : MonoBehaviour
 
     public void Damage()
     {
+        audioSource.Play();
+
         health -= 20;
         
         if (health < 0)
@@ -58,7 +60,6 @@ public class Player : MonoBehaviour
 
     public void Correct(float points)
     {
-        soundEffectManager.PlayWaterShoot();
 
         health += points / 10;
 
