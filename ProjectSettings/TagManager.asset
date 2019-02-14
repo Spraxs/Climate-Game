@@ -56,3 +56,6 @@ TagManager:
   - name: Player
     uniqueID: 1549843027
     locked: 0
+  - name: Fire
+    uniqueID: 2125628427
+    locked: 0

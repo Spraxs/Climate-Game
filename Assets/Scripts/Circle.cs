@@ -20,16 +20,19 @@ public class Circle : MonoBehaviour
 
     private float speed;
 
+    private CircleSpawner circleSpawner;
+
     private void Awake()
     {
         hitCircle = FindObjectOfType<HitCircle>();
-        player = hitCircle.GetComponent<Player>();
+        player = FindObjectOfType<Player>();
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        speed = CircleSpawner.instance.speed;
+        circleSpawner = transform.parent.GetComponent<CircleSpawner>();
+        speed = circleSpawner.speed;
         spawnTime = Time.time;
         image = GetComponent<Image>();
 
@@ -59,6 +62,6 @@ public class Circle : MonoBehaviour
 
     void OnDestroy()
     {
-        CircleSpawner.instance.circles.Remove(this);
+        circleSpawner.circles.Remove(this);
     }
 }

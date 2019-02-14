@@ -12,8 +12,18 @@ public class Player : MonoBehaviour
 
     private SoundEffectManager soundEffectManager;
 
+    [SerializeField]
+    private GameObject waterObject;
+
+    [SerializeField]
+    private Transform gunTransform;
+
+    private GameManager gameManager;
+
     void Awake()
     {
+        gameManager = FindObjectOfType<GameManager>();
+        FindObjectOfType<HitCircle>().player = this;
         soundEffectManager = FindObjectOfType<SoundEffectManager>();
     }
 
@@ -39,6 +49,11 @@ public class Player : MonoBehaviour
         {
             health = 0;
         }
+
+        if (health == 0)
+        {
+            gameManager.EndGame(MenuManager.MenuType.LOSE);
+        }
     }
 
     public void Correct(float points)
@@ -51,5 +66,16 @@ public class Player : MonoBehaviour
         {
             health = 100;
         }
+
+        Shoot(points);
+    }
+
+    private void Shoot(float points)
+    {
+
+        Water water = Instantiate(waterObject).GetComponent<Water>();
+
+        water.SetSpawnPosition(gunTransform.position);
+        water.SetDamage(points);
     }
 }

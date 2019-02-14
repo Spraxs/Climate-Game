@@ -5,14 +5,18 @@ using UnityEngine;
 public class HitCircle : MonoBehaviour
 {
     private InputController inputController;
-    private Player player;
+
+    [HideInInspector]
+    public Player player;
 
     public float travelTimeInSeconds;
+
+    private CircleSpawner circleSpawner;
 
     // Start is called before the first frame update
     void Awake()
     {
-        player = GetComponent<Player>();
+        circleSpawner = FindObjectOfType<CircleSpawner>();
         inputController = FindObjectOfType<InputController>();
 
         inputController.buttonInputAction += ButtonInput;
@@ -20,8 +24,9 @@ public class HitCircle : MonoBehaviour
 
     private void ButtonInput(InputController.ButtonInput buttonInput)
     {
-        if (GetActiveCircle() == null) return;
 
+
+        if (GetActiveCircle() == null || player == null) return;
         Circle circle = GetActiveCircle();
 
         float distance = Vector3.Distance(transform.position, circle.transform.position);
@@ -65,8 +70,8 @@ public class HitCircle : MonoBehaviour
 
     private Circle GetActiveCircle()
     {
-        if (CircleSpawner.instance.circles.Count <= 0) return null;
+        if (circleSpawner.circles.Count <= 0) return null;
 
-        return CircleSpawner.instance.circles[0];
+        return circleSpawner.circles[0];
     }
 }

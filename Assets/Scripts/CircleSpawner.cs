@@ -7,29 +7,24 @@ public class CircleSpawner : MonoBehaviour
 {
 
     public List<Circle> circles = new List<Circle>();
+
     private Canvas canvas;
 
     public GameObject circleObject;
 
     private bool canSpawn;
 
-    public static CircleSpawner instance;
-
     public float speed;
 
 
     [SerializeField]
     private int amount;
+
     [SerializeField]
     private float spawnDelay;
 
     [SerializeField]
     private float rowDelay;
-
-    private void Awake()
-    {
-        instance = this;
-    }
 
     // Start is called before the first frame update
     void Start()
@@ -45,7 +40,7 @@ public class CircleSpawner : MonoBehaviour
         
         Circle circle = Instantiate(circleObject).GetComponent<Circle>();
 
-        circle.transform.parent = transform;
+        circle.transform.SetParent(transform);
 
         circle.transform.localPosition = Vector3.zero;
 
@@ -78,6 +73,4 @@ public class CircleSpawner : MonoBehaviour
         StartCoroutine(RowSpawnCooldown());
 
     }
-
-
 }
