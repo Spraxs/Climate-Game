@@ -20,7 +20,7 @@ Voor Xbox: Groen = A, rood = B, blauw = X en geel = Y.
 Voor Playstation: Groen = X, rood = O, blauw = ▉ en geel = ▲.
 
 ---
-#### Producten Werkproces 1
+#### Producten
 | Product  | Link |
 | ------ |  ------ |
 | Prototype                                 | [Prototype]
