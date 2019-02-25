@@ -14,7 +14,6 @@ De besturing van het spel staat hieronder.
 
 ### Besturing
 U heeft een controller nodig voor dit spel.
-
 Voor Xbox: Groen = A, rood = B, blauw = X en geel = Y.
 
 Voor Playstation: Groen = X, rood = O, blauw = ▉ en geel = ▲.
