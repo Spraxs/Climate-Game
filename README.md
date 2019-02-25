@@ -24,8 +24,9 @@ Voor Playstation: Groen = X, rood = O, blauw = ▉ en geel = ▲.
 | Product  | Link |
 | ------ |  ------ |
 | Prototype                                 | [Prototype]
-| Logboek (pdf)                             | [Logboek]
+| Game preview                              | [Preview]
 | Game concept doc (pdf)                    | [GameDesignDoc]
 |<img width=500/>|<img width=300/>|
 
    [Prototype]: <http://26497.hosts2.ma-cloud.nl/bewijzenmap/periode2_2/Hackaton/>
+   [Preview]: <https://youtu.be/fHEx1oi_YN4>
