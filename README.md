@@ -14,6 +14,7 @@ De besturing van het spel staat hieronder.
 
 ### Besturing
 U heeft een controller nodig voor dit spel.
+
 Voor Xbox: Groen = A, rood = B, blauw = X en geel = Y.
 
 Voor Playstation: Groen = X, rood = O, blauw = ▉ en geel = ▲.
@@ -22,15 +23,9 @@ Voor Playstation: Groen = X, rood = O, blauw = ▉ en geel = ▲.
 #### Producten Werkproces 1
 | Product  | Link |
 | ------ |  ------ |
-| Link naar online product backlog (Trello) | [Backlog]
+| Prototype                                 | [Prototype]
 | Logboek (pdf)                             | [Logboek]
 | Game concept doc (pdf)                    | [GameDesignDoc]
 |<img width=500/>|<img width=300/>|
 
-   [Backlog]: <https://trello.com/b/hik72z4q/mythe-2019-voorbeeld-trello>
-   [Logboek]: <https://github.com/BerendWeij/agp_inlever_template/blob/master/producten/logboek.pdf>
-   [GameDesignDoc]: <https://github.com/BerendWeij/agp_inlever_template/blob/master/producten/GameDesignDoc.pdf>
-   [RetrospectiveVerslagen]: <https://github.com/BerendWeij/agp_inlever_template/blob/master/producten/RetrospectiveVerslagen.pdf>
-   [ReviewVerslagen]: <https://github.com/BerendWeij/agp_inlever_template/blob/master/producten/ReviewVerslagen.pdf>
-   [Prototype]: <https://www.mijnmytheprototype.nl>
-   [AssetPlanning]: <https://github.com/BerendWeij/agp_inlever_template/blob/master/producten/AssetPlanning.pdf>
+   [Prototype]: <http://26497.hosts2.ma-cloud.nl/bewijzenmap/periode2_2/Hackaton/>
